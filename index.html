@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lesson-7 HW-13</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div>
+      <div class="product">
+        <div>
+          <img
+            src="./images/generator.png"
+            alt="генератор"
+            class="product-image"
+            width="200"
+          />
+        </div>
+        <div>
+          <div class="description">
+            <p class="product-title">Генератор Honda 1,5 кВт однофазний бензиновий</p>
+            <p>Виробник: HONDA</p>
+            <p>Ціна: 14 900 грн</p>
+          </div>
+          <button class="buy" type="button">Купити</button>
+        </div>
+      </div>
+      <div class="orderInfo">
+        <form class="buyProduct">
+          <fieldset>
+            <legend>Дані покупця</legend>
+            <label>
+              <span class="labelName">Прізвище</span>
+              <input
+                name="lastName"
+                pattern="[а-яА-ЯьЬіІїЇєЄa-zA-Z\-]+"
+                title="Лише букви"
+                required
+              />
+            </label>
+            <label>
+              <span class="labelName">Ім'я</span>
+              <input
+                name="firstName"
+                pattern="[а-яА-ЯьЬіІїЇєЄa-zA-Z\-]+"
+                title="Лише букви"
+                required
+              />
+            </label>
+            <label>
+              <span class="labelName">По-батькові</span>
+              <input
+                name="fatherName"
+                pattern="[а-яА-ЯьЬіІїЇєЄa-zA-Z\-]+"
+                title="Лише букви"
+              />
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>Дані для доставки "Новою Поштою"</legend>
+            <label class="cityLabel">
+              Будь-ласка, введіть назву населеного пункту:
+              <input name="city" required />
+            </label>
+            <div class="cityList"></div>
+            <div class="departamentList"></div>
+          </fieldset>
+          <fieldset>
+            <legend>Деталі замовлення</legend>
+            <label>
+              <span class="labelOrder">Кількість одиниць продукції</span>
+              <input
+                name="productAmount"
+                pattern="\d+"
+                title="Лише цифри"
+                required
+              />
+            </label>
+            <label>
+              <span class="labelOrder">Коментар до замовлення</span>
+              <textarea name="comment"></textarea>
+            </label>
+          </fieldset>
+          <button class="submitOrder" type="submit">Підтвердити</button>
+        </form>
+      </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/index.js" type="module"></script>
+  </body>
+</html>
